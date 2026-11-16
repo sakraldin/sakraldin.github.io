@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ammar Yasser Portfolio</title>
+<meta name="description" content="Portfolio of Ammar Yasser AbdulZaher Ahmed: Cyber Security Engineering student and aspiring SOC Analyst. SIEM, incident response, DFIR, and network security projects.">
+<meta name="author" content="Ammar Yasser AbdulZaher Ahmed">
+<meta name="theme-color" content="#18212b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ammar Yasser AbdulZaher Ahmed | Portfolio">
+<meta property="og:description" content="Cyber Security Engineering student and aspiring SOC Analyst. SIEM, incident response, DFIR, and network security projects.">
+<meta property="og:url" content="https://sakraldin.github.io/">
+<link rel="canonical" href="https://sakraldin.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318212b'/%3E%3Ctext x='32' y='43' font-size='28' text-anchor='middle' fill='%2386c9c0' font-family='Arial' font-weight='700'%3EAY%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#18212b;
+  --surface:#202b37;
+  --line:#2f3d4c;
+  --text:#e6ebf0;
+  --muted:#9fb0bf;
+  --accent:#86c9c0;
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65;font-size:16px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{text-wrap:balance;line-height:1.2;margin:0}
+p{margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+nav{position:sticky;top:0;z-index:10;background:rgba(24,33,43,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;flex-wrap:wrap}
+.brand{font-weight:800;color:var(--text)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{color:var(--muted);font-size:.92rem;font-weight:600}
+nav ul a:hover{color:var(--text);text-decoration:none}
+
+.hero{padding:64px 0 40px}
+.hero .loc{color:var(--accent);font-weight:700;font-size:.9rem;margin-bottom:12px}
+.hero h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:800;margin-bottom:10px}
+.hero .role{font-size:1.15rem;color:var(--muted);margin-bottom:18px;font-weight:500}
+.hero .bio{max-width:62ch;color:var(--text);margin-bottom:26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:700;font-size:.95rem;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#14202a}
+.btn.ghost{color:var(--accent)}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+
+section{padding:44px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:1.6rem;margin-bottom:6px}
+.sub{color:var(--muted);margin-bottom:26px}
+
+.timeline{display:grid;gap:18px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.item .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:6px}
+.item h3{font-size:1.1rem}
+.item .meta{color:var(--accent);font-size:.88rem;font-weight:700}
+.item .org{color:var(--muted);margin-bottom:10px}
+ul.list{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--text)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:1.02rem}
+.card p{color:var(--muted);font-size:.94rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.tag,.chip{font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--accent);background:rgba(134,201,192,.08)}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.cols h3{font-size:1.05rem;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row span:last-child{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.contact .c{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;overflow-wrap:anywhere}
+.contact small{display:block;color:var(--muted);font-weight:600;margin-bottom:2px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Ammar Yasser</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="loc">Cairo, Egypt</div>
+    <h1>Ammar Yasser AbdulZaher Ahmed</h1>
+    <div class="role">Cyber Security Engineering student · Aspiring SOC Analyst</div>
+    <p class="bio">I work on SOC operations, SIEM monitoring, incident response, network security, and threat detection. I build detections in Splunk, ELK, and Wazuh, investigate incidents end to end, and write the code to automate the repetitive parts.</p>
+    <div class="btns">
+      <a class="btn primary" href="#contact">Contact me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/ammar-sakr-84786644a">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/sakraldin">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="sub">Client work and education.</p>
+    <div class="timeline">
+      <article class="item">
+        <div class="top"><h3>Freelance Cyber Security Analyst</h3><span class="meta">2023 - Present</span></div>
+        <div class="org">Client engagements · Cairo, Egypt</div>
+        <ul class="list">
+          <li>Investigated Windows and Linux hosts for persistence and mapped findings to MITRE ATT&amp;CK.</li>
+          <li>Analyzed network traffic to detect command-and-control and data exfiltration activity.</li>
+          <li>Handled phishing and malware incidents from detection to recovery, with written reports.</li>
+          <li>Built SIEM detections, dashboards, and alert triage workflows with Splunk, ELK, and Wazuh.</li>
+          <li>Designed a branch network for a pharmacy chain in Saudi Arabia.</li>
+        </ul>
+      </article>
+      <article class="item">
+        <div class="top"><h3>B.Sc. in Cyber Security Engineering</h3><span class="meta">Expected 2027</span></div>
+        <div class="org">Faculty of Computers and Information, Egypt</div>
+        <p>Coursework in artificial intelligence, computer networking, and embedded systems.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">Projects delivered for clients.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Network Traffic Analysis &amp; C2/Exfiltration Detection</h3>
+        <p>Found command-and-control communication and data exfiltration in packet captures, and documented the indicators of compromise in SOC-style reports.</p>
+        <div class="tags"><span class="tag">Wireshark</span><span class="tag">Network Analysis</span><span class="tag">IOCs</span></div>
+      </article>
+      <article class="card">
+        <h3>Windows &amp; Linux Host DFIR and Persistence</h3>
+        <p>Investigated hosts for attacker persistence, collected artifacts and logs, and rebuilt the attack timeline against MITRE ATT&amp;CK.</p>
+        <div class="tags"><span class="tag">DFIR</span><span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">MITRE ATT&amp;CK</span></div>
+      </article>
+      <article class="card">
+        <h3>Phishing, Malware &amp; Incident Response Case</h3>
+        <p>Ran the full response lifecycle from detection to recovery, analyzed phishing and malware artifacts, and delivered a structured incident report.</p>
+        <div class="tags"><span class="tag">Incident Response</span><span class="tag">Phishing</span><span class="tag">Malware</span></div>
+      </article>
+      <article class="card">
+        <h3>SIEM Detection Engineering &amp; SOC Operations</h3>
+        <p>Built a mini SOC lab for log collection and alerting, wrote detection rules and dashboards, and triaged alerts into true and false positives.</p>
+        <div class="tags"><span class="tag">Splunk</span><span class="tag">ELK</span><span class="tag">Wazuh</span><span class="tag">Detection Rules</span></div>
+      </article>
+      <article class="card">
+        <h3>AI-Assisted SOC Automation &amp; IR Capstone</h3>
+        <p>Designed an AI-assisted workflow for alert enrichment and triage, then applied it to a full end-to-end incident response engagement.</p>
+        <div class="tags"><span class="tag">SOC Automation</span><span class="tag">AI</span><span class="tag">Incident Response</span></div>
+      </article>
+      <article class="card">
+        <h3>Malicious URL Analysis Tool</h3>
+        <p>A Python tool that analyzes links and flags suspicious or malicious URLs.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Threat Analysis</span></div>
+      </article>
+      <article class="card">
+        <h3>Pharmacy Branch Network Design</h3>
+        <p>Network design for multiple pharmacy branches in Saudi Arabia, covering topology, IP addressing, and secure connectivity between branches.</p>
+        <div class="tags"><span class="tag">Networking</span><span class="tag">Cisco</span><span class="tag">Network Design</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="wrap">
+    <h2>Certificates &amp; Courses</h2>
+    <p class="sub">Completed training and ongoing study.</p>
+    <div class="cols">
+      <div class="item">
+        <h3>Certificates</h3>
+        <div class="row"><span>Fortinet Cybersecurity Training, NTI</span><span>2026</span></div>
+        <div class="row"><span>SOC Analyst Training, DEPI</span><span>2026</span></div>
+      </div>
+      <div class="item">
+        <h3>Courses &amp; exam preparation</h3>
+        <div class="row"><span>Cisco CCNA (200-301)</span><span>Course</span></div>
+        <div class="row"><span>Cisco CCNP Security</span><span>Course</span></div>
+        <div class="row"><span>OffSec OSCP</span><span>Preparing</span></div>
+        <div class="row"><span>INE eJPT</span><span>Preparing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">Tools and languages I use.</p>
+    <div class="cols">
+      <div class="item"><h3>SIEM &amp; monitoring</h3><div class="chips"><span class="chip">Splunk</span><span class="chip">ELK Stack</span><span class="chip">Wazuh</span><span class="chip">Detection Engineering</span><span class="chip">Alert Triage</span></div></div>
+      <div class="item"><h3>Security operations</h3><div class="chips"><span class="chip">SOC Operations</span><span class="chip">Incident Response</span><span class="chip">DFIR</span><span class="chip">Threat Detection</span><span class="chip">MITRE ATT&amp;CK</span></div></div>
+      <div class="item"><h3>Network security</h3><div class="chips"><span class="chip">Wireshark</span><span class="chip">Traffic Analysis</span><span class="chip">C2 Detection</span><span class="chip">Network Design</span></div></div>
+      <div class="item"><h3>Programming &amp; systems</h3><div class="chips"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Linux</span></div></div>
+      <div class="item"><h3>Languages</h3><div class="chips"><span class="chip">Arabic: Native</span><span class="chip">English: B1</span><span class="chip">French: A2</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="sub">Open to junior SOC analyst roles and client work.</p>
+    <div class="contact">
+      <div class="c"><small>Email</small><a href="mailto:sakraldinamar@gmail.com">sakraldinamar@gmail.com</a></div>
+      <div class="c"><small>Phone</small><a href="tel:+201010339467">+20 101 033 9467</a></div>
+      <div class="c"><small>LinkedIn</small><a href="https://www.linkedin.com/in/ammar-sakr-84786644a">linkedin.com/in/ammar-sakr-84786644a</a></div>
+      <div class="c"><small>GitHub</small><a href="https://github.com/sakraldin">github.com/sakraldin</a></div>
+      <div class="c"><small>TryHackMe</small><a href="https://tryhackme.com/p/tryhackme2201">tryhackme.com/p/tryhackme2201</a></div>
+      <div class="c"><small>Location</small>Cairo, Egypt</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© Ammar Yasser AbdulZaher Ahmed</div></footer>
+</body>
+</html>
